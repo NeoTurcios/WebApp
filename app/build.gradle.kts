@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.example.webtoapp"
-    compileSdk = 35 // SDK 36 is not yet stable/released as a numeric value in common AGP versions, using 35 as latest stable
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.webtoapp"
         minSdk = 24
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0.0"
 
