@@ -56,7 +56,9 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.play.services-ads)
+    implementation(libs.play.services.ads)
+    implementation(libs.user.messaging.platform)
+
     
     // Webview support
     implementation("androidx.webkit:webkit:1.12.1")

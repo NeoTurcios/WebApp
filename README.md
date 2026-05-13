@@ -55,10 +55,29 @@ DropdownMenuItem(
 Para cambiar el icono de la app:
 1. Genera tus iconos usando una herramienta como [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html).
 2. Descarga el zip y reemplaza las carpetas `mipmap-*` en `app/src/main/res/`.
+---
+
+## 💰 Monetización con AdMob
+
+La app ya incluye integración de anuncios **Intersticiales** y cumple con las políticas de privacidad (GDPR/UMP).
+
+### 1. Configuración de IDs (Producción)
+Para publicar, reemplaza los IDs de prueba en los siguientes lugares:
+
+- **App ID:** En `app/src/main/AndroidManifest.xml`, cambia el valor de `com.google.android.gms.ads.APPLICATION_ID`.
+- **Ad Unit ID (Intersticial):** En `app/src/main/kotlin/com/example/webtoapp/MainActivity.kt`, dentro de la función `loadInterstitial()`.
+
+### 2. Cumplimiento Legal y Consentimiento
+He integrado el SDK de **User Messaging Platform (UMP)** de Google, el cual:
+- Muestra automáticamente el formulario de consentimiento en regiones donde es obligatorio (como Europa).
+- Solo inicializa los anuncios si el usuario otorga el permiso.
+- Cumple con las políticas actuales de la Play Store para anuncios personalizados.
 
 ---
 
 ## 🏗️ Workflows de GitHub
+...
+
 Este repositorio incluye dos flujos de trabajo manuales:
 1. **Build Debug APK:** Genera un archivo `.apk` para pruebas rápidas.
 2. **Build Release AAB:** Genera un archivo `.aab` (Android App Bundle) listo para subir a Play Store (sin firmar).
