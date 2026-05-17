@@ -229,7 +229,7 @@ fun FloatingHeader(
                         onClick = { /* TODO: Link Twitter */ showMenu = false },
                         leadingIcon = { Icon(Icons.Default.Share, contentDescription = null) }
                     )
-                    Divider()
+                    HorizontalDivider()
                     DropdownMenuItem(
                         text = { Text("Ajustes") },
                         onClick = { showMenu = false }
