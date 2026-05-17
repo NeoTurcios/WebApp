@@ -9,5 +9,6 @@ This project is a modern Android WebView application using Jetpack Compose and M
 
 ## 🤖 AI Coordination
 - Refer to `AGENTS.md` for detailed architectural constraints and UI patterns.
+- Refer to `SKILLS.md` for information about automated workflows and CI/CD capabilities.
 - Keep components minimalist and follow the **Floating Header** pattern.
 - Always update `AGENTS.md` if a significant architectural change or "lesson learned" occurs to prevent future AI agents from repeating mistakes.
