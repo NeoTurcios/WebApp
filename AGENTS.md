@@ -19,13 +19,21 @@ This file provides context for AI assistants (like Gemini CLI, Cursor, etc.) to 
 - **Package:** `app/build.gradle.kts` (`applicationId`) and directory structure.
 - **Resources:** `app/src/main/res/`.
 
-## Workflow
+## Workflow & Build (CRITICAL)
 - **Builds:** Automated via GitHub Actions (`.github/workflows/`).
-- **Target SDK:** 35 (latest stable).
+- **Gradle Wrapper:** The `gradlew` script is MISSING from the repo. 
+  - **Local:** Use system `gradle`.
+  - **CI:** Use `gradle/actions/setup-gradle@v4`.
+- **Target SDK:** 36 (latest stable).
 - **Min SDK:** 24.
 
 ## Guidelines for AI
 1. When adding features, ensure they align with the **minimalist** and **modern** aesthetic.
 2. Maintain the **Floating Header** pattern for navigation or settings.
 3. Always use **Kotlin DSL** for Gradle files (`.gradle.kts`).
-4. Ensure all new components are documented in `README.md` if they require user configuration.
+4. **Version Catalog Syntax:** Access libraries using dots (`.`) instead of hyphens (`-`) or underscores (`_`).
+   - ✅ `libs.plugins.compose.compiler`
+   - ✅ `libs.androidx.activity.compose`
+   - ✅ `libs.androidx.compose.bom`
+5. **Kotlin Options:** Use the modern `compilerOptions` DSL instead of the deprecated `kotlinOptions`.
+6. Ensure all new components are documented in `README.md` if they require user configuration.
